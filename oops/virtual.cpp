@@ -38,11 +38,13 @@ public:
 
 class D_child : public D{
 public:
+	/*foo() automatically becomes virtual here*/
 	void foo(){}
 };
 
 class E_child : public E{
 public:
+	/*foo() automatically becomes virtual here*/
 	void foo(){}
 };
 
