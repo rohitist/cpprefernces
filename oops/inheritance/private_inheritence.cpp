@@ -18,7 +18,7 @@ int main(){
 	animal *a;
 	dog* d = new dog();
 
-	a = d;
+	a = d; //compilation failure
 	a->bark(); //trying to access private members of animal
 	a->eat(); //trying to access private members of animal
 

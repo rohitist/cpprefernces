@@ -8,19 +8,17 @@ public:
 	virtual void eat() { cout << "animal eat()\n"; }
 };
 
-class dog : public animal{
+class dog : animal{ //Default inheritance is also private inheritence
 public:
 	void bark() { cout << "dog bark()\n"; }
 	void eat() { cout << "dog eat()\n"; }
 };
 
 int main(){
-	animal *a;
+	//Default inheritance works with object of same class
 	dog* d = new dog();
-
-	a = d;
-	a->bark();
-	a->eat();
+	d->bark();
+	d->eat();
 
 	return 0;
 }

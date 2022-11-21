@@ -8,7 +8,7 @@ public:
 	virtual void eat() { cout << "animal eat()\n"; }
 };
 
-class dog : animal{
+class dog : public animal{
 public:
 	void bark() { cout << "dog bark()\n"; }
 	void eat() { cout << "dog eat()\n"; }
@@ -18,7 +18,7 @@ int main(){
 	animal *a;
 	dog* d = new dog();
 
-	a = d;
+	a = d;// compiles fine
 	a->bark();
 	a->eat();
 
