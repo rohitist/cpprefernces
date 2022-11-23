@@ -2,6 +2,9 @@
 
 using namespace std;
 
+/*
+Use case: This program also demostrates the usage of union and struct members as bit fields
+*/
 int main(){
     typedef struct {
         /*max size of each variable is 8 bits*/

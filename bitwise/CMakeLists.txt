@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.0.0)
 
 set(BUILD_FLAGS -Wall ${STD_COMPILER_VERSION})
 
+add_executable(decimalToBinary decimalToBinary.cpp)
+add_executable(check_endianess check_endianess.cpp)
 add_executable(flip_a_bit flip_a_bit.cpp)
 add_executable(flip_two_bits flip_two_bits.cpp)
 add_executable(get_a_bit get_a_bit.cpp)
