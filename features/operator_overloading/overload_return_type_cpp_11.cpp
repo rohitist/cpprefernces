@@ -17,6 +17,8 @@ private:
 
 public:
     from_string(const char *str) : m_str(str) {}
+
+    //Note that there is no return type explicity mentioned in the conversion operator
     template <typename data_type>
     operator data_type() {
         if(is_same<data_type, int>::value)

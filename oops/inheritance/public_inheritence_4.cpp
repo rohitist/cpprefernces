@@ -1,6 +1,8 @@
 #include <iostream>
+//Use case: This program demostrates that the compilation will fail if no virtual function is defined in case of inheritence
 
 using namespace std;
+#define PRINT_FUNCTION (cout << __PRETTY_FUNCTION__ << endl)
 
 class animal{
 public:
@@ -20,9 +22,9 @@ int main(){
 	dog* d = new dog();
 
 	a = d;// compiles fine
-	a->bark();
-	a->eat();
-	a->wigTail(); //accessing function of dog
+	a->bark(); //build fine
+	a->eat(); //build fine
+	a->wigTail(); //Build fail because there is no virtual function in Parent class
 
 	return 0;
 }

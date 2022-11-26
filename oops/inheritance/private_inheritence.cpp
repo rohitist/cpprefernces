@@ -1,5 +1,5 @@
 #include <iostream>
-
+//Use case: Private inheritence and accessing class from main()
 using namespace std;
 
 class animal{

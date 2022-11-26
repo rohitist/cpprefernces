@@ -7,7 +7,7 @@ void foo(char *c){
 }
 
 int main(){
-	char *s = "rohit"; //constant string
+	char *s = "rohit"; //not a constant string
 	foo(s);
 	printf("%s", s);
 	return 0;

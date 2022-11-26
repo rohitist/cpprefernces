@@ -48,6 +48,11 @@ int main(){
     //for_each(vec.begin(), vec.end(), [](const int& n){ cout << n << " "; }) is also same as above;
     cout << endl;
 
+    cout << "Iterating using auto for loop\n";
+    for(auto i : vec){
+        cout << i << " ";
+    }
+
     //capacity
     cout << "Capacity of the vector: " << vec.capacity() << " and size is: " << vec.size() << endl;
 
