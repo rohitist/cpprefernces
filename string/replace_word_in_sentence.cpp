@@ -10,17 +10,15 @@ int main(){
 
     for(int i = 0; i < original.length(); i++){
         //find first matching letter and once found try to do the rest of the match
-        if(original[i] == existing_word[0]){
-            begin = i;
-            for(int j = 1; j < existing_word.length(); j++){
-                if(existing_word[j] != original[i]){ //single mismatch and give up
-                    break;
-                }
-                else{
-                    offset++;
-                }
+        for(int j = 0; j < existing_word.length(); j++){
+            if(existing_word[i] != original[j]){
+                continue;
             }
+            else{
+                //at least one match
+                begin = j;
 
+            }
         }
 
     }
