@@ -16,6 +16,7 @@ public:
     List(): head(nullptr){}
 
     void push_back(int value){
+        cout << "Pushing " << value << " at the end of list\n";
         if(head == nullptr){
             //first element in the list
             head = new Node(value);
@@ -33,6 +34,7 @@ public:
     }
 
     void push_front(int value){
+        cout << "Pushing " << value << " at the head of list\n";
         if(head == nullptr){
             head = new Node(value);
         }
@@ -45,6 +47,7 @@ public:
     }
 
     void dump_list(){
+        cout << "dumping the list\n";
         if(head != nullptr){
             Node *tmp = head;
             while(tmp){
