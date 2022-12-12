@@ -20,3 +20,5 @@ add_executable(dynamic_cast_without_virtual_function_ptr dynamic_cast_without_vi
 add_executable(dynamic_cast_with_virtual_function_ref dynamic_cast_with_virtual_function_ref.cpp)
 add_executable(union_class_derived union_class_derived.cpp)
 add_executable(union_class_as_base union_class_as_base.cpp)
+add_executable(object_slicing object_slicing.cpp)
+add_executable(object_slicing_in_stl object_slicing_in_stl.cpp)

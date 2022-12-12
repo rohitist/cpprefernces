@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool set_contains(multiset<string>& stringset, string word){
+bool vector_contains(vector<string>& stringset, string word){
     for(string s : stringset){
         if(s.compare(word) == 0)
             return true;
@@ -12,9 +12,9 @@ bool set_contains(multiset<string>& stringset, string word){
 
 string replace_word(forward_list<string>& list, string& sentence){
     //create a set from list. The idea is that it will be faster to search a word from it
-    multiset<string> word_set; //multiset because we want it ordered as strings are inserted and have duplicate strings as well
+    vector<string> word_vector; //multiset because we want it ordered as strings are inserted and have duplicate strings as well
     for(auto lst : list){
-        word_set.insert(lst);
+        word_vector.push_back(lst);
     }
 
     string output = "";
@@ -29,7 +29,7 @@ string replace_word(forward_list<string>& list, string& sentence){
         for(int i = 1; i <= word.length(); i++){//trie (prefix tree) concept to perform matching
             prefix = word.substr(0, i);
             
-            if(set_contains(word_set, prefix)){ // if cat is found in cattle then its evaluated as true
+            if(vector_contains(word_vector, prefix)){ // if cat is found in cattle then its evaluated as true
                 break;
             }
         }

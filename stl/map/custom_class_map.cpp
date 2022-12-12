@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 
+/*
+ *Use case: inserting custom class in a map as key 
+*/
 using namespace std;
 
 class user{

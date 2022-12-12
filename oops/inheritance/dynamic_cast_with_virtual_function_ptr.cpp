@@ -2,17 +2,26 @@
 
 using namespace std;
 
-class Base { virtual void foo(){} };
-class Derived : public Base {};
+class Base { 
+public:
+    virtual void foo(){ cout << __PRETTY_FUNCTION__ << endl; } 
+};
+class Derived : public Base {
+public:
+    void foo() { cout << __PRETTY_FUNCTION__ << endl; }
+};
 
 int main(){
     Base *b = new Derived();
     Derived *d = dynamic_cast<Derived*>(b); //dynamic_cast upon failure will return null pointer
 
-    if(d)
+    if(d){
         cout << "Casted to Derived\n";
-    else
+        d->foo();
+    }
+    else{
         cout << "Couldn't cast to Derived\n";
+    }
 
     
 

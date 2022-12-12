@@ -10,6 +10,7 @@ set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
 #add subdirectories to build
+add_subdirectory(algorithm/string)
 add_subdirectory(bitwise)
 add_subdirectory(implementation)
 add_subdirectory(misc)

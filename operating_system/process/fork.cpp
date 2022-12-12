@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/* This program demostrates what happens when execl is called from main process
+*/
+
 void parent(){
     cout << "called from parent process with pid: " << getpid() << endl;
 }

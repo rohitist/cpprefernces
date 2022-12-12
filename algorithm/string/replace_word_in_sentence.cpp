@@ -3,15 +3,15 @@
 using namespace std;
 //TODO: incomplete program
 
-multiset<string> string_to_set(string sentence){
-    multiset<string> tokens; //multiset because we want it ordered as strings are inserted and have duplicate strings as well
+vector<string> string_to_vector(string sentence){
+    vector<string> tokens; //multiset because we want it ordered as strings are inserted and have duplicate strings as well
 
     regex pattern("\\s+");
     regex_token_iterator<string::iterator> out(sentence.begin(), sentence.end(), pattern, -1);
     regex_token_iterator<string::iterator> end;
 
     for(; out != end; out++){
-        tokens.insert(string(*out));
+        tokens.push_back(string(*out));
     }
 
     return tokens;
@@ -19,7 +19,7 @@ multiset<string> string_to_set(string sentence){
 
 string replace_word(string original, string existing_word, string replacing_word){
     string output = "";
-    multiset<string> words = string_to_set(original);
+    vector<string> words = string_to_vector(original);
 
     for(string word : words){
         if(word.compare(existing_word) == 0){  
@@ -35,7 +35,7 @@ string replace_word(string original, string existing_word, string replacing_word
     return output;
 }
 int main(){
-    string original = "George Michael is my name";
+    string original = "George Michael Is My Name";
     string existing_word = "Michael";
     string replacing_word = "Butler";
 
