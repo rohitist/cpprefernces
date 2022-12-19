@@ -14,17 +14,17 @@ void print_in_binary(uint16_t byte){
 
 
 int main(){
-    uint16_t byte = 0xBABA;
+    uint16_t byte = 0x5003;
+    uint16_t out = 0x0000; 
 
     print_in_binary(byte);
     cout << endl;
 
-    for(int i = 0; i < 16; i++){
-        //TODO: perform bitwise swap of bits
+    for(int i = 0; i < 16; i++, byte >>= 1){
+        out = (out << 1) | (byte & 1); //get the bit from lsb and keep pushing it towards msb
     }
-    
-    print_in_binary(reversed);
-    cout << endl;
+
+    print_in_binary(out);
 
     return 0;
 }

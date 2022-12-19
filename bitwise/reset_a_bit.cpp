@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
-
+/*
+ * reset of clear a bit 
+*/
 void printBinary(unsigned int x){
     if(x/2 != 0) {
         printBinary(x/2);

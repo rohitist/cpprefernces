@@ -13,7 +13,7 @@ int main() {
     printBinary(num);
     std::cout << std::endl;
 
-    num = num ^ (1 << (bit_pos - 1));
+    num = num | (1 << (bit_pos - 1));
 
     printBinary(num);
     std::cout << std::endl;
