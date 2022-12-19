@@ -2,8 +2,8 @@
 
 using namespace std;
 
-//TODO: not working
 void print_in_binary(uint16_t byte){
+    /*this function doesn't print the leading 0*/
     if(byte/2 != 0){
         print_in_binary(byte/2);
     }
@@ -25,6 +25,7 @@ int main(){
     }
 
     print_in_binary(out);
+    cout << endl;
 
     return 0;
 }
