@@ -4,3 +4,4 @@ set(BUILD_FLAGS -Wall ${STD_COMPILER_VERSION})
 
 add_executable(condition_variable condition_variable.cpp)
 add_executable(rw_lock rw_lock.cpp)
+add_executable(pthread_basic pthread_basic.cpp)
