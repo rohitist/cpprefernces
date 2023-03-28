@@ -5,7 +5,7 @@ using namespace std;
 class Singleton{
 public:
     //This is thread safe in C++11 but not safe before C++11
-    static Singleton& getInstance(){
+    static Singleton& getInstance(){ //static functions can be accessed without creating an object of the class
         static Singleton singleton;
         return singleton;
     }

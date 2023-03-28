@@ -1,0 +1,1 @@
+//Spin lock is used when we don't want pre-emption and immediately come out of mutex once the work is done
