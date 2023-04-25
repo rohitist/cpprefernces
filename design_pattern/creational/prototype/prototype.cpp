@@ -7,6 +7,8 @@ Use case: Demonstrating the usage of protoype design pattern
 
 Advantage: When creating an object is costly, it is advised to use cloning an existing object. Cloning in C++ is achieved by using copy constructor
 
+Note: cloning doesn't mean no memory allocation
+
 How is cloning better than instantiating with new operator:
 -----------------------------------------------------------
         Imagine a scenario when an object is created with new operator and in its corresponding constructor, some heavy lifting is done such as few SQL operations
