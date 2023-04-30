@@ -22,7 +22,7 @@ void print_arr(const vector<int>& arr, int i_pass = -1, int j_pass = -1){
 
 void bubble_sort(vector<int>& arr){
     for(int i = 0; i < arr.size() - 1; i++){
-        for(int j = 0; j < arr.size() - i - 1; j++){
+        for(int j = 0; j < arr.size() - i - 1; j++){ // i is subtracted because the largest element is pushed to far right end is each pass, so no need to compare with that element again in later passes
             if(arr[j] > arr[j + 1]){
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -30,7 +30,6 @@ void bubble_sort(vector<int>& arr){
             }
             print_arr(arr, i, j);
         }
-        
     }
 }
 
