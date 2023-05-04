@@ -1,0 +1,1 @@
+//See https://stackoverflow.com/questions/27085782/how-to-break-shared-ptr-cyclic-reference-using-weak-ptr
