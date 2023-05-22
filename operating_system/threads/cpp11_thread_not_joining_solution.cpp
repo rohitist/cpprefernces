@@ -3,9 +3,11 @@
 using namespace std;
 
 /*
-Use case: Using C++11 Thread class to create threads
+Use case: Using C++11 Thread class to create threads. detach() must be called if join() is not called
 Run: ./cpp11_thread
 */
+
+using namespace literals; //this is necessary to use ms literal in this_thread::sleep_for(1000ms)
 
 class Worker{
 private:
@@ -34,12 +36,10 @@ int main(){
     Worker *worker = new Worker();
 
     std::thread producer(&Worker::produce, worker, "Rohit");
-    std::thread consumer1(&Worker::consume, worker);
-    std::thread consumer2(&Worker::consume, worker);
 
-    producer.join();//join() is necessary otherwise std::terminate will be called and program will be aborted
-    consumer1.join();
-    consumer2.join();
+    //producer.join(); //join() is necessary otherwise std::terminate will be called and program will be aborted
+    producer.detach();
+    std::this_thread::sleep_for(1000ms); //sleeping the main thread to delay process cleanup. without this, producer thread will not print anything
 
     return 0;
 }

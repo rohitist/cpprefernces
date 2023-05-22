@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-Use case: Using C++11 Thread class to create threads
+Use case: Using C++11 Thread class to create threads and see what happens if the join() is not called
 Run: ./cpp11_thread
 */
 
@@ -34,12 +34,8 @@ int main(){
     Worker *worker = new Worker();
 
     std::thread producer(&Worker::produce, worker, "Rohit");
-    std::thread consumer1(&Worker::consume, worker);
-    std::thread consumer2(&Worker::consume, worker);
 
-    producer.join();//join() is necessary otherwise std::terminate will be called and program will be aborted
-    consumer1.join();
-    consumer2.join();
+    //producer.join(); //join() is necessary otherwise std::terminate will be called and program will be aborted
 
     return 0;
 }

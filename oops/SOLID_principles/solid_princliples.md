@@ -1,0 +1,1 @@
+https://needlify.com/post/solid-principles-explained-with-examples-a84f0918

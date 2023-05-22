@@ -1,0 +1,1 @@
+https://www.geeksforgeeks.org/difference-between-inline-and-macro-in-c/
