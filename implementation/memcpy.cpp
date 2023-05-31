@@ -5,7 +5,10 @@ void *_memcpy(void *target, void *source, size_t size){
         (uintptr_t)source % sizeof(long) == 0 &&
         size % sizeof(long) == 0){
             /*len%sizeof(long) checks if you are trying to copy full-longs not a part of long
-             *checks for alignment and if true, copies fast(sizeof(long) bytes at a time)*/
+             *checks for alignment and if true, copies fast(sizeof(long) bytes at a time)
+             
+             sizeof(long) is size of a word. processing one word per CPU cycle is best possible way to copy
+             */
 
             long *tgt = (long *)target;
             const long *src = (const long *)source;

@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 
 
      // This send() function sends the 13 bytes of the string to the new socket
-     send(newsockfd, "Hello, world!\n", 13, 0);
+     send(newsockfd, "Hello, world!\n", 13, 0); // Do you know the difference between send() and write() and similarly recv() and read()
 
      bzero(buffer,256);
 
