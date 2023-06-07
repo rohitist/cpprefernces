@@ -1,0 +1,1 @@
+https://blog.thea.codes/the-most-thoroughly-commented-linker-script/

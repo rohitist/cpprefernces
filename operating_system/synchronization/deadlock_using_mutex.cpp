@@ -3,7 +3,7 @@
 #include <algorithm>
 
 /*
-Use case: A Program to demonstrate deadlock. Same mutex is being called here to lock twice
+Use case: A Program to demonstrate deadlock. Same mutex is being called here to lock twice from JUST one thread
 */
 pthread_t tid;
 pthread_mutex_t lock_t;
