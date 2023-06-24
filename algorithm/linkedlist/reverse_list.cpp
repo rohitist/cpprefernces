@@ -53,7 +53,7 @@ public:
             prev = curr;
             curr = next;
         }
-        head = prev;
+        head = prev; /*at this point, curr is already NULL and therefore prev becomes is the last node. Thus prev becomes head*/
     }
 
     //TODO: not working
