@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/*
+Use case: Disallow instantiating class on stack
+*/
+
 class Base{
 public:
     Base(){

@@ -22,5 +22,6 @@ int main(){
     Base *b = new Derived();//b object has private function and we're trying to access in main() leading to error
     b->foo(); //build fails. Base::foo() is private in context of main()
 
+    Derived *d = new Derived(); //This will build and will Derived::foo
     return 0;
 }

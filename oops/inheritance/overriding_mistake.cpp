@@ -24,7 +24,7 @@ public:
 int main(){
     unique_ptr<Base> base = make_unique<Child>(); //Base points to an object of Child
     base->foo(5); //But Base::foo will always be called
-    base->foo(static_cast<int>(5)); //Even after static_cast to int, Base::foo will still be called because Child::foo cannot override Base::foo due to programmer mistake
+    base->foo(static_cast<float>(5)); //Even after static_cast to float, Base::foo will still be called because Child::foo cannot override Base::foo due to programmer mistake
 
     return 0;
 }
