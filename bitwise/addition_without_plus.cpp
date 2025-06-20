@@ -3,6 +3,9 @@
 using namespace std;
 
 int add_binary(int left, int right){
+    //assume that x will contain the result of addition
+    //and y will contain the carry-out
+    //we will keep on adding carry until it becomes zero
     int x = 0, y = 0;
 
     do{
