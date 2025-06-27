@@ -12,6 +12,7 @@ int main(){
     struct node{
         int a;
         char b;
+        float f;
     } node_struct;
 
     std::cout << _sizeof(node_struct) << std::endl;
